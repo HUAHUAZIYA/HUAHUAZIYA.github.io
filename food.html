@@ -1,25 +1,121 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
-  <title>南昌美食推荐</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南昌美食推荐</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FF4500; /* 橘红色背景 */
+            color: #333; /* 主要文本颜色 */
+            text-align: center;
+        }
+        header {
+            background-color: #FF6347; /* 番茄色导航栏 */
+            color: white;
+            padding: 15px 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #fff;
+            color: #FF6347;
+            border-radius: 5px;
+        }
+        main {
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #FFF5EE;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .food-item {
+            background-color: #FFF5EE;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .food-item:hover {
+            transform: scale(1.05);
+        }
+        .food-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .button-container {
+            margin-top: 30px;
+        }
+        .button-container button {
+            background-color: #FF6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #FF7F50;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>南昌美食推荐</h1>
-  </header>
-  <main>
-    <h2>特色美食</h2>
-    <p>南昌以其丰富的美食文化而闻名，以下是一些必尝的美食：</p>
-    <ul>
-      <li>南昌米粉</li>
-      <li>糖醋小排</li>
-      <li>南昌炒米粉</li>
-      <!-- 添加更多美食信息 -->
-    </ul>
-  </main>
-  <script src="js/script.js"></script>
+    <header>
+        <h1>南昌美食推荐</h1>
+        <nav>
+            <a href="#spicy-crayfish">辣味小龙虾</a>
+            <a href="#rice-noodles">瓦罐汤</a>
+            <a href="#fried-rice">南昌炒粉</a>
+            <a href="#desserts">特色甜点</a>
+        </nav>
+    </header>
+    <main>
+        <section id="spicy-crayfish" class="food-item">
+            <h2>辣味小龙虾</h2>
+            <img src="龙虾.png" width="200" height="200" alt="辣味小龙虾">
+            <p>辣味小龙虾是南昌的一道经典夜宵美食。口感鲜美，辣而不燥，是夏天消暑的绝佳选择。</p>
+        </section>
+        <section id="rice-noodles" class="food-item">
+            <h2>瓦罐汤</h2>
+            <img src="瓦罐汤.png" width="200" height="200" alt="瓦罐汤">
+            <p>瓦罐汤是用瓦罐慢炖而成，味道鲜美，营养丰富，是南昌人家常汤品之一。</p>
+        </section>
+        <section id="fried-rice" class="food-item">
+            <h2>南昌米粉</h2>
+            <img src="米粉.png" width="200" height="200" alt="南昌米粉">
+            <p>南昌米粉以辣著称，粉丝非常筋道，加上丰富的配料，让人百吃不厌。</p>
+        </section>
+        <section id="desserts" class="food-item">
+            <h2>特色甜点</h2>
+            <img src="甜点.png" width="200" height="200" alt="特色甜点">
+            <p>南昌的特色甜点种类繁多，从传统的糕点到现代创意甜品，每一口都是甜蜜的享受。</p>
+        </section>
+        <div class="button-container">
+            <button onclick="showAlert()">查看更多美食</button>
+        </div>
+    </main>
+    <script>
+        function showAlert() {
+            alert('更多南昌美食即将上线，敬请期待！');
+        }
+    </script>
 </body>
 </html>

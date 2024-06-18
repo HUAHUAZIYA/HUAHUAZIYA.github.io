@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南昌的自然景色</title>
+    <style>
+        body {
+            background-color: #7FFFD4; /* 青色背景 */
+            color: #000;
+            font-family: 'KaiTi', '楷体', serif; /* 楷书字体 */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #48D1CC;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        main {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 2em;
+            color: #2E8B57;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 10px;
+        }
+        .image-gallery img {
+            width: calc(33% - 10px);
+            border: 2px solid #2E8B57;
+            border-radius: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        .show-more-btn {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #2E8B57;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>南昌的自然景色</h1>
+    </header>
+    <main>
+        <section>
+            <h2>绚丽的自然景观</h2>
+            <p>南昌，位于中国江西省，是一个拥有丰富自然景色的城市。这里有壮丽的湖泊、连绵的山脉和辽阔的湿地，每一处都展现出大自然的鬼斧神工。南昌的秋水广场是观赏赣江美景的绝佳地点，尤其是在日落时分，夕阳映照在江面上，宛如一幅美丽的画卷。</p>
+            <p>此外，南昌的梅岭风景区也是不得不提的胜地。这里山峦叠翠，植被茂密，是徒步和登山爱好者的天堂。每到春季，梅岭的花海更是吸引了无数游客前来观赏，漫山遍野的花朵如同彩霞一般，美不胜收。</p>
+            <p>滕王阁作为南昌的标志性建筑之一，不仅历史悠久，而且其周围的自然景色也相当迷人。站在阁楼上，可以俯瞰整个南昌市区的美景，远眺赣江两岸，青山绿水尽收眼底。</p>
+        </section>
+        <section class="image-gallery">
+            <img src="秋水.png" alt="秋水广场">
+            <img src="梅岭.png" alt="梅岭风景区">
+            <img src="滕王阁.png" alt="滕王阁">
+            <img src="赣江.png" alt="赣江" class="hidden">
+            <img src="绿地.png" alt="绿地中心" class="hidden">
+        </section>
+        <button class="show-more-btn" onclick="showMoreImages()">显示更多图片</button>
+    </main>
+    <script>
+        function showMoreImages() {
+            const hiddenImages = document.querySelectorAll('.image-gallery .hidden');
+            hiddenImages.forEach(img => {
+                img.classList.remove('hidden');
+            });
+            document.querySelector('.show-more-btn').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

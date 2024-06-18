@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南昌交通介绍</title>
+    <style>
+        body {
+            background-color: #000; /* 黑色背景 */
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        main {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            font-family: 'Georgia', serif;
+        }
+        h2 {
+            font-size: 2em;
+            color: #ffa500;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 10px 0;
+            font-family: 'Verdana', sans-serif;
+        }
+        .transport {
+            background-color: #444;
+            border: 1px solid #ffa500;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .transport h3 {
+            font-size: 1.8em;
+            color: #ff6347;
+        }
+        .transport p {
+            font-family: 'Tahoma', sans-serif;
+        }
+        button {
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #cd3700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>南昌交通介绍</h1>
+    </header>
+    <main>
+        <section class="transport">
+            <h2>地铁</h2>
+            <p>南昌地铁系统是城市的重要交通方式之一，目前共有多条线路覆盖城市的主要区域，方便居民和游客出行。</p>
+            <button onclick="showMoreInfo('metro')">了解更多</button>
+            <p id="metro" style="display:none;">南昌地铁不仅快捷高效，而且价格实惠。地铁站点分布广泛，涵盖了市中心和多个重要的商业区和生活区。</p>
+        </section>
+        <section class="transport">
+            <h2>公交</h2>
+            <p>南昌的公交系统非常发达，线路覆盖全市各个角落，为市民提供了便利的公共交通服务。</p>
+            <button onclick="showMoreInfo('bus')">了解更多</button>
+            <p id="bus" style="display:none;">南昌的公交车次频繁，票价低廉，是日常通勤的主要选择。夜间还有夜班公交，进一步提升了市民的出行便利性。</p>
+        </section>
+        <section class="transport">
+            <h2>出租车</h2>
+            <p>南昌的出租车服务也非常便捷。无论是在市区内还是前往郊区，出租车都是一种舒适快速的出行方式。</p>
+            <button onclick="showMoreInfo('taxi')">了解更多</button>
+            <p id="taxi" style="display:none;">南昌的出租车起步价合理，司机服务态度友好。您可以通过道路上的招手即停或通过各种打车软件预定出租车服务。</p>
+        </section>
+        <section class="transport">
+            <h2>铁路</h2>
+            <p>南昌是中国重要的铁路枢纽之一，从这里出发可以方便地到达全国各地。</p>
+            <button onclick="showMoreInfo('railway')">了解更多</button>
+            <p id="railway" style="display:none;">南昌拥有多个火车站，包括南昌站和南昌西站，高铁和普速列车每天都开行多班次，连接着其他主要城市。</p>
+        </section>
+    </main>
+    <script>
+        function showMoreInfo(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

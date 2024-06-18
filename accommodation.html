@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南昌大型酒店介绍</title>
+    <style>
+        body {
+            background-color: #FFA500; /* 橙色背景 */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FF6347;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        main {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            font-family: 'Georgia', serif;
+        }
+        h2 {
+            font-size: 2em;
+            color: #D2691E;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 10px 0;
+            font-family: 'Verdana', sans-serif;
+        }
+        .hotel {
+            background-color: #FFF5EE;
+            border: 1px solid #FFD700;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .hotel h3 {
+            font-size: 1.8em;
+            color: #B22222;
+        }
+        .hotel p {
+            font-family: 'Tahoma', sans-serif;
+        }
+        button {
+            background-color: #FF4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #CD3700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>南昌大型酒店介绍</h1>
+    </header>
+    <main>
+        <section class="hotel">
+            <h2>南昌香格里拉大酒店</h2>
+            <p>南昌香格里拉大酒店位于城市中心，提供豪华的住宿环境和一流的服务。酒店内设有多个餐饮选择、健身房、游泳池和会议设施。</p>
+            <button onclick="showMoreInfo('shangriLa')">了解更多</button>
+            <p id="shangriLa" style="display:none;">香格里拉大酒店以其独特的东方风情和现代舒适感著称，是商务旅行和休闲度假的理想之选。</p>
+        </section>
+        <section class="hotel">
+            <h2>南昌喜来登酒店</h2>
+            <p>南昌喜来登酒店拥有宽敞舒适的客房和套房，配备高端设施和贴心服务。酒店还设有多个会议室和宴会厅，适合各种商务活动和私人庆典。</p>
+            <button onclick="showMoreInfo('sheraton')">了解更多</button>
+            <p id="sheraton" style="display:none;">喜来登酒店的餐厅提供丰富的国际美食，此外还有水疗中心和健身俱乐部，为您带来全方位的放松体验。</p>
+        </section>
+        <section class="hotel">
+            <h2>南昌万达文华酒店</h2>
+            <p>南昌万达文华酒店坐落于繁华地段，提供优雅的住宿环境和卓越的服务品质。酒店内设有多个特色餐厅、酒吧和咖啡厅。</p>
+            <button onclick="showMoreInfo('wanda')">了解更多</button>
+            <p id="wanda" style="display:none;">万达文华酒店的房间设计时尚，设施齐全，酒店还提供24小时客房服务和洗衣服务，满足您的所有需求。</p>
+        </section>
+    </main>
+    <script>
+        function showMoreInfo(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
