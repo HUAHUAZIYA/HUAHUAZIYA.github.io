@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>南昌文化景点</title>
+  <style>
+    body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 2em;
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  color: #333;
+}
+
+p {
+  text-align: justify;
+}
+
+#culture-intro {
+  margin-bottom: 40px;
+}
+
+#cultural-heritage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.heritage-item {
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+.heritage-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.heritage-item h3 {
+  margin-top: 10px;
+}
+
+.heritage-item p {
+  font-style: italic;
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1>南昌文化景点</h1>
+  </header>
+  <main>
+    <h2>探索南昌的文化瑰宝</h2>
+    <p>南昌，作为江西省的省会城市，不仅拥有悠久的历史，更是文化底蕴深厚的城市。以下是一些南昌著名的文化景点：</p>
+    
+    <section class="slider">
+      <div class="slides">
+        <div class="slide">
+          <img src="images/tengwang-pavilion.jpg" alt="滕王阁">
+          <div class="caption">滕王阁</div>
+        </div>
+        <div class="slide">
+          <img src="images/youmin-temple.jpg" alt="佑民寺">
+          <div class="caption">佑民寺</div>
+        </div>
+        <div class="slide">
+          <img src="images/bayi-square.jpg" alt="八一广场">
+          <div class="caption">八一广场</div>
+        </div>
+        <!-- 添加更多幻灯片 -->
+      </div>
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </section>
+
+    <article>
+      <h3>滕王阁</h3>
+      <p>滕王阁位于南昌市赣江之滨，是江南三大名楼之一，以其优美的建筑和悠久的文化传承吸引了大量游客。</p>
+      
+      <h3>佑民寺</h3>
+      <p>佑民寺建于唐代，是南昌市内保存最为完好的古老寺庙之一，香火旺盛，历史文化氛围浓厚。</p>
+      
+      <h3>八一广场</h3>
+      <p>八一广场是南昌市的标志性地点之一，纪念着南昌起义的重要历史事件，是市民和游客们常去的地方。</p>
+    </article>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>
